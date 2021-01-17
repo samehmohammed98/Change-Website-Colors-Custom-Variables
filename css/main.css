@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.container .switch-color {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+.container .switch-color li {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #ddd;
+  cursor: pointer;
+}
+.container .switch-color li:first-child {
+  background-color: #b71540;
+}
+.container .switch-color li:nth-child(2) {
+  background-color: #0c2461;
+}
+.container .switch-color li:nth-child(3) {
+  background-color: #3c6382;
+}
+.container .switch-color li:nth-child(4) {
+  background-color: #079992;
+}
+.container .switch-color li:last-child {
+  background-color: #e58e26;
+}
+.container .changes div {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  float: left;
+  width: calc(97% / 4);
+}
+.container .changes div:not(:last-child) {
+  margin-right: 1%;
+}

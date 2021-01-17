@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vue Calculate Product</title>
+</head>
+<body>
+  <div id="vue-test" class="container" :style="{'--main-color': color }">
+    <ul class="switch-color">
+      <li data-color="#b71540" @click='updateColoe'></li>
+      <li data-color="#0c2461" @click='updateColoe'></li>
+      <li data-color="#3c6382" @click='updateColoe'></li>
+      <li data-color="#079992" @click='updateColoe'></li>
+      <li data-color="#e58e26" @click='updateColoe'></li>
+    </ul>
+    <div class="changes">
+      <div>Change</div>
+      <div>Change</div>
+      <div>Change</div>
+      <div>Change</div>
+    </div>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#vue-test',
+      data: {
+        color: '#b71540'
+      },
+      methods: {
+        updateColoe: function(e) {
+          this.color = e.target.getAttribute('data-color');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
